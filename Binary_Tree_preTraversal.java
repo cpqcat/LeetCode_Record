@@ -21,6 +21,9 @@ class Binary_Tree_preTraversal {
     }
 
     // 2. iterative, left children are stored to stack
+    // 这个方法是保存左节点，也是起到一个记录的作用
+    // 从根节点直接循环到最左边的叶子节点，再取出，接着判断是右节点是否存在，存在则往右节点走，否则就弹栈
+    //
     public List<Integer> preoderTraversal_iterative_left(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
@@ -37,6 +40,10 @@ class Binary_Tree_preTraversal {
     }
 
     // iterative, right children are stored to stack
+    // 从根节点出发，读出根节点，将右节点压入栈中，再往左子树走，如果左子树的节点是空，而且栈不是空的，取出
+    // 之前在栈中保存的右节点，继续循环
+    // 时间复杂度：每个节点遍历一遍是N
+    // 空间复杂度：只是保存右节点，所以最大需要的栈的空间是logN或者h
     public List<Integer> preoderTraversal_iterative_right(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
@@ -54,6 +61,7 @@ class Binary_Tree_preTraversal {
     }
 
     //iterative, both children are stored to stack
+
     public List<Integer> preoderTraversal_iterative_both(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
