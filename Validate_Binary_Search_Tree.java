@@ -24,6 +24,16 @@ public class Validate_Binary_Search_Tree {
 
     }
 
+    //方法1的优化
+    long pre1 = Long.MIN_VALUE;
+    public boolean isValidBST1(TreeNode root) {
+        if (root == null) return true;
+
+        if (!isValidBST1(root.left)) return false;
+        if (root.val <= pre1) return false;
+        if (!isValidBST(root.right)) return false;
+        return true;
+    }
 
     //递归求解，根节点一定大于左子树，小于右子树，思考这个问题自己总是要把左子树的最大值找出来和根节点比较
     //实际不用这样，根节点和左孩子节点比较，然后左孩子节点和左孩子节点的左孩子比较，通过局部的传递性，就可
