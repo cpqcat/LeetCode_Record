@@ -52,3 +52,4 @@ public class Validate_Binary_Search_Tree {
         if(!helper(root.right, root.val, high)) return false;
         return true;
     }
+}
