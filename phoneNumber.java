@@ -29,4 +29,22 @@ class phoneNumber {
         helper(subres + item.charAt(i), res, map, digits, index + 1);
         }
     }
+
+    public List<String> letterCombinations2(String digits) {
+        String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        List<String> res = new ArrayList<>();
+        if (digits == null || digits.length() == 0) return res;
+        res.add("");
+        for (int i = 0; i < digits.length(); i++) {
+            String item = mapping[digits.charAt(i)-'0'];
+            int count = res.size();
+            while (count-- >0) {
+                String s = res.remove(0);
+                for (char c : item.toCharArray()) {
+                res.add(s + c);
+                }
+            }
+        }
+        return res;
+    }
 }
