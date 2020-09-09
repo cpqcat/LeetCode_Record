@@ -31,6 +31,7 @@ class phoneNumber {
     }
 
     public List<String> letterCombinations2(String digits) {
+        System.out.println();
         String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         List<String> res = new ArrayList<>();
         if (digits == null || digits.length() == 0) return res;
