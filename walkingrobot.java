@@ -1,6 +1,13 @@
 import java.util.HashSet;
 import java.util.Set;
-
+class test {
+    public static void main(String[] agrs) {
+        //加减优先级高于移位
+        int i = 2 << 2 + 1;
+        int j = (2 << 2) + 1;
+        System.out.println(i + " " + j);
+    }
+}
 class Solution {
     public int robotSim(int[] commands, int[][] obstacles) {
         int direx[] = {0, 1, 0, -1};
