@@ -10,3 +10,5 @@ class maximumSub {
         return max;
     }
 }
+
+//之前的最大值加上我自己和我现在比较，取最大
