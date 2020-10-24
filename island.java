@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class island {
     int find(int[] parent, int i) {
         if (parent[i] == -1){
@@ -55,6 +57,4 @@ public class island {
         }
         return count;
     }
-}class island {
-    
 }

@@ -69,6 +69,4 @@ class UnionFind {
             parents[jParent] = iParent;
         }
     }
-}class surrounded {
-    
 }
